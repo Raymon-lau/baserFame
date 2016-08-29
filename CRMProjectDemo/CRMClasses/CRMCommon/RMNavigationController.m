@@ -6,13 +6,13 @@
 //  Copyright © 2016年 Raymon. All rights reserved.
 //
 
-#import "CRMNavigationController.h"
+#import "RMNavigationController.h"
 
-@interface CRMNavigationController ()
+@interface RMNavigationController ()
 
 @end
 
-@implementation CRMNavigationController
+@implementation RMNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -7,6 +7,7 @@
 //
 
 #import "RMMapLocation.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface RMMapLocation ()<CLLocationManagerDelegate,UIAlertViewDelegate>
 @property (strong, nonatomic)CLLocationManager *locManager;

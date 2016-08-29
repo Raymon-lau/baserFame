@@ -8,7 +8,7 @@
 
 #import "RMRequestManger.h"
 #import "AFNetworking.h"
-#import "UploadParam.h"
+#import "RMUploadParam.h"
 
 #define serverUrl @"http://192.168.1.1:8080/jiekou"
 
@@ -72,11 +72,11 @@
             }
             [RMUtils hudSuccessHidden];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [RMUtils showMessage:STR_ALERT_SYSTEMRESPOSE];
+            [RMUtils showMessage:@"服务器无响应,请重新操作！"];
             [RMUtils hudFailHidden];
         }];
     }else{
-        [RMUtils hudFailHidden:STR_ALERT_CHECKNETSTATUS];
+        [RMUtils hudFailHidden:@"请检查网络连接"];
     }
     
 }
@@ -128,7 +128,7 @@
 #pragma mark -- 上传图片 --
 + (void)uploadWithURLString:(NSString *)URLString
                  parameters:(id)parameters
-                uploadParam:(UploadParam *)uploadParam
+                uploadParam:(RMUploadParam *)uploadParam
                     success:(void (^)(id response))success
                     failure:(void (^)(NSError *))failure {
     [RMUtils hudShow];
@@ -137,7 +137,7 @@
     NSString *string = URLString;
     if (![URLString hasPrefix:@"http"]) {
         
-        string = [NSString stringWithFormat:@"%@%@", kRequestLoadImageURL,URLString];
+//        string = [NSString stringWithFormat:@"%@%@", kRequestLoadImageURL,URLString];
     }
 
     [manager POST:string parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {

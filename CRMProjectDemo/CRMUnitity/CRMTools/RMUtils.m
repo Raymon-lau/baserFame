@@ -198,7 +198,7 @@
     }
     
     if (textColor == nil) {
-        textColor = RGB(100, 100, 100);
+        textColor = [UIColor whiteColor];
     }
     
     UILabel *label = [[UILabel alloc]initWithFrame:frame];
@@ -316,15 +316,6 @@
     NSString *locationString = [dateformatter stringFromDate:date];
     return locationString;
 }
-
-+ (UIColor *)defaultBackColor
-{
-    UIColor *color = RGB(237, 237, 237);
-    return color;
-}
-
-
-
 
 + (CGFloat)createAttrNameLabel:(CGRect)frame Text:(NSString *)text  SuperView:(id)view{
     UILabel *attrNameLabel = [RMUtils labelWith:frame font:[UIFont systemFontOfSize:9] text:text textColor:RGB(0, 141, 223)];
@@ -465,7 +456,7 @@
 + (BOOL)checkTel:(NSString *)str
 {
     if ([str length] == 0) {
-        [RMUtils showMessage:STR_ALERT_PHONE_NUUL];
+        [RMUtils showMessage:@"手机号不能为空,请重新输入"];
         return NO;
     }
     //1[0-9]{10}

@@ -101,10 +101,6 @@
 // 获取当前日期(字符串)
 + (NSString *)currentDateWithFormatter:(NSString *)formatter;
 
-// 默认背景颜色
-+ (UIColor *)defaultBackColor;
-
-
 /*
  * 添加标签
  */

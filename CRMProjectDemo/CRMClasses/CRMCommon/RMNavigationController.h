@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CRMNavigationController : UINavigationController
+@interface RMNavigationController : UINavigationController
 
 @end

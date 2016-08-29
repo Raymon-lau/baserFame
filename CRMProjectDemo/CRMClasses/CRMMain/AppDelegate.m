@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RMTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    RMTabBarController *tabBarVC = [[RMTabBarController alloc] init];
+    self.window.rootViewController = tabBarVC;
     return YES;
 }
 

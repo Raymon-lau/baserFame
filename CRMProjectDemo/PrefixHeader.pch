@@ -9,6 +9,41 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#if DEBUG
+#define RMLog(...) NSLog(__VA_ARGS__)
+#else
+#define RMLog(...)
+#endif
+
+#import "RMRequestManger.h"
+#import "UIImageView+WebCache.h"
+#import "NSString+Expense.h"
+#import "UIView+Expense.h"
+#import "UIButton+Expense.h"
+#import "RMMapLocation.h"
+#import "RMNetWork.h"
+#import "GTMBase64.h"
+#import "RMUtils.h"
+
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+
+// 默认的电池的高度
+static CGFloat const kDefaultHeightForTop = 20;
+static CGFloat const kMinCommonButtonWidth = 44;
+
+//默认navigationBar高度
+static CGFloat const TopNavBarHeight = 64;
+
+//默认tabbar高度
+static CGFloat const TabbarHeight = 44;
+
+//默认的标记icon的宽度
+static CGFloat const defaultMarkWidth = 20;
+
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
