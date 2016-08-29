@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CRMNavigationController.h
 //  CRMProjectDemo
 //
 //  Created by 刘闻天 on 16/8/29.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CRMNavigationController : UINavigationController
 
 @end
-
